@@ -11,6 +11,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Create manual or automatic PDF invoice for WooCommerce orders.
 
 == Description ==
+
 Generate PDF invoices for WooCommerce orders quickly and easily. You can customize how invoice are generated and how the invoice template looks like. Choose if invoice should be generated on new order, when order is in processing status or when order is completed.
 Attach invoice as a PDF file on emails sent to customer and let your customer download his invoices directly from the "my orders" page.
 Include a customizable template that you can rewrite from your theme.
