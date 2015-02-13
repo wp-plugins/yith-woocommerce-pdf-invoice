@@ -1,0 +1,21 @@
+.widefat .column-order_actions a.button.ywpi_invoice {
+    display: block;
+    text-indent: -9999px;
+    position: relative;
+    padding: 0 !important;
+    height: 2em !important;
+    width: 2em;
+
+    position: relative;
+}
+
+.widefat .column-order_actions a.button.ywpi_invoice:after {
+    display: none;
+}
+
+.widefat .column-order_actions a.button.ywpi_invoice img {
+    position: absolute;
+    top: 0;
+    width: auto;
+    margin: 3px;
+}
