@@ -1,6 +1,6 @@
 <?php if ( 'yes' == get_option( 'ywpi_show_invoice_notes' ) ) : ?>
 	<div class="notes">
-		<span class="notes-title">Notes</span>
+		<span class="notes-title"><?php _e("Notes", "ywpi"); ?></span>
 		<span><?php echo nl2br( get_option( 'ywpi_invoice_notes' ) ); ?></span>
 	</div>
 <?php endif; ?>

@@ -1,4 +1,3 @@
-
 <div class="invoice-document">
 	<div class="company-header">
 		<table>
@@ -56,26 +55,5 @@
 			</tr>
 		</table>
 	</div>
-
-
-	<div class="invoice-content">
-		<?php
-		/**
-		 * yith_ywpi_invoice_template_products_list hook
-		 *
-		 * @hooked show_invoice_template_products_list - 10 (Show products list)
-		 */
-		do_action( 'yith_ywpi_invoice_template_products_list' );
-		?>
-	</div>
-
-	<?php
-	/**
-	 * yith_ywpi_invoice_template_footer hook
-	 *
-	 * @hooked show_invoice_template_footer - 10 (add data on footer)
-	 */
-	do_action( 'yith_ywpi_invoice_template_footer' );
-	?>
 
 </div>

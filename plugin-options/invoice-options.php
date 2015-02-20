@@ -55,10 +55,11 @@ $general_options = array(
 			'default' => '[prefix]/[number]/[suffix]'
 		),
 		'invoice_reset'            => array(
-			'name' => __( 'Reset on 1st January', 'ywpi' ),
-			'type' => 'checkbox',
-			'id'   => 'ywpi_invoice_reset',
-			'desc' => __( 'Set restart from 1 on 1st January.', 'ywpi' ),
+			'name'    => __( 'Reset on 1st January', 'ywpi' ),
+			'type'    => 'checkbox',
+			'id'      => 'ywpi_invoice_reset',
+			'desc'    => __( 'Set restart from 1 on 1st January.', 'ywpi' ),
+			'default' => false
 		),
 		'invoice_date_format'      => array(
 			'name'    => __( 'Invoice date format', 'ywpi' ),
@@ -83,9 +84,9 @@ $general_options = array(
 			'id'      => 'ywpi_create_invoice_on',
 			'type'    => 'radio',
 			'options' => array(
-				'new'   => __("On new order.", "ywpi"),
-				'processing' => __("For processing order.", "ywpi"),
-				'completed' => __("For completed order.", "ywpi")
+				'new'        => __( "On new order.", "ywpi" ),
+				'processing' => __( "For processing order.", "ywpi" ),
+				'completed'  => __( "For completed order.", "ywpi" )
 			),
 			'default' => 'completed',
 			'std'     => 'completed'
@@ -95,11 +96,18 @@ $general_options = array(
 			'id'      => 'ywpi_pdf_invoice_behaviour',
 			'type'    => 'radio',
 			'options' => array(
-				'download'   => "Download PDF",
-				'open' => "Open PDF on browser"
+				'download' => "Download PDF",
+				'open'     => "Open PDF on browser"
 			),
 			'default' => 'download',
 			'std'     => 'download'
+		),
+		'shipping_list'            => array(
+			'name'    => __( 'Enable shipping list', 'ywpi' ),
+			'type'    => 'checkbox',
+			'id'      => 'ywpi_enable_shipping_list',
+			'desc'    => __( 'Add buttons for shipping list document generation.', 'ywpi' ),
+			'default' => 'yes'
 		),
 		'invoice_settings_end'     => array(
 			'type' => 'sectionend',
