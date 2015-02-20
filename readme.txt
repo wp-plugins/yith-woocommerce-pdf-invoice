@@ -12,12 +12,8 @@ Generate and send PDF Invoice and Shipping list documents for WooCommerce orders
 
 == Description ==
 
-Generate PDF invoices for WooCommerce orders quickly and easily. You can customize if invoice are manually or automatically generated.
-You can customize all the templates used for document generationhipping list template looks like. Choose if invoice should be generated on new order, when order is in processing status or when order is completed.
-Attach invoice as a PDF file on emails sent to customer and let your customer download his invoices directly from the "my orders" page.
-Include a customizable template that you can rewrite from your theme.
-
-Discover all the features of the plugin and install it in your theme: the result will be extremely satisfying.
+This WooCommerce plugin lets create PDF invoices and shipping list documents for WooCommerce orders quickly and easily with customizable templates.
+Set if invoice are manually or automatically generated with custom number format and send it as attachment on email sent to customers.
 
 = Main features =
 
@@ -30,6 +26,8 @@ Discover all the features of the plugin and install it in your theme: the result
 * Customizable invoice template.
 * Customizable shipping list template.
 * Download invoices from customer orders page.
+
+Discover all the features of the plugin and install it in your theme: the result will be extremely satisfying.
 
 = Installation =
 
