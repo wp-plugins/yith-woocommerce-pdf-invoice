@@ -226,7 +226,7 @@ if ( ! class_exists( 'YITH_WooCommerce_Pdf_Invoice' ) ) {
 				return $column;
 			}
 
-			echo '<small class="meta">' . sprintf( __( "Invoice N : %s of %s", "ywpi" ), $invoice->get_formatted_invoice_number(), $invoice->get_formatted_date() ) . '</small>';
+			echo '<small class="meta">' . sprintf( __( "Invoice No. %s of %s", "ywpi" ), $invoice->get_formatted_invoice_number(), $invoice->get_formatted_date() ) . '</small>';
 		}
 
 		/**
@@ -331,22 +331,24 @@ if ( ! class_exists( 'YITH_WooCommerce_Pdf_Invoice' ) ) {
 					return;
 				}
 
-				$pdf_url = YITH_YWPI_DOCUMENT_SAVE_DIR . $document->save_path;
+				$full_path = YITH_YWPI_DOCUMENT_SAVE_DIR . $document->save_path;
 
 				//  Check if show pdf invoice on browser or asking to download it
 				$where_to_show = get_option( 'ywpi_pdf_invoice_behaviour' );
 
-				if ( isset( $where_to_show ) && ( 'open' == $where_to_show ) ) {
+				if ( 'open' == $where_to_show  ) {
 					header( 'Content-type: application/pdf' );
-					header( 'Content-Disposition: inline; filename="' . basename( $pdf_url ) . '"' );
-				} else {
-					header( 'Content-type: application / pdf' );
-					header( 'Content-Disposition: attachment; filename = "' . basename( $pdf_url ) . '"' );
+					header( 'Content-Disposition: inline; filename = "' . basename( $full_path ) . '"' );
 					header( 'Content-Transfer-Encoding: binary' );
-					header( 'Content-Length: ' . filesize( $pdf_url ) );
+					header( 'Content-Length: ' . filesize( $full_path ) );
 					header( 'Accept-Ranges: bytes' );
+					@readfile( $full_path );
+					exit();
+				} else {
+					header( "Content-type: application/pdf" );
+					header( 'Content-Disposition: attachment; filename = "' . basename( $full_path ) . '"' );
+					@readfile( $full_path );
 				}
-				@readfile( $pdf_url );
 			}
 		}
 

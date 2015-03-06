@@ -4,79 +4,81 @@ Contributors: yithemes
 Tags: woocommerce, orders, woocommerce order, pdf, invoice, pdf invoice, delivery note, pdf invoices, automatic invoice, download, download invoice, bill order, billing, automatic billing, order invoice, billing invoice, new order, processing order, shipping list, shipping document, delivery, packing slip, transport document,  delivery, shipping, order, shop, shop invoice, customer, sell, invoices, email invoice, packing slips
 Requires at least: 4.0
 Tested up to: 4.1.0
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Generate and send PDF Invoice and Shipping list documents for WooCommerce orders via email.
+Generate and send PDF invoices and shipping list documents for WooCommerce orders via email.
 
 == Description ==
 
-This WooCommerce plugin lets create PDF invoices and shipping list documents for WooCommerce orders quickly and easily with customizable templates.
-Set if invoice are manually or automatically generated with custom number format and send it as attachment on email sent to customers.
+This WooCommerce plugin allows creating PDF invoices and shipping list documents for WooCommerce orders quickly and easily with customizable templates.
+Choose if generating invoices manually or automatically using custom number format and send it as email attachment to your customers.
 
 = Main features =
 
-* Generate PDF Invoice and shipping list documents.
+* Generate PDF invoices and shipping list documents.
 * Customizable invoice number format.
 * Autoincrement invoice number.
 * Automatically or manually generated invoice documents.
-* Generate invoices automatically based on order status.
-* Add PDF Invoice as attachment on order email sent to customer.
+* Generate invoices automatically depending on order status.
+* Add PDF invoice as attachment of the email sent to customer.
 * Customizable invoice template.
 * Customizable shipping list template.
-* Download invoices from customer orders page.
+* Download invoices from customers' order page.
 
 Discover all the features of the plugin and install it in your theme: the result will be extremely satisfying.
 
-= Installation =
+== Installation ==
+Important: First of all, you have to download and activate WooCommerce plugin, which is mandatory for Yith WooCommerce PDF Invoice and Shipping List to be working.
 
-Important: before of all, you have to download and activate WooCommerce plugin, which is mandatory for Yith WooCommerce PDF Invoice to be working. If WooCommerce plugin is active, you just need to activate the Yith WooCommerce PDF Invoice plugin and customize settings with your company data.
+1. Download and unzip the downloaded file.
+2. Upload the plugin folder into the `wp-content/plugins/` directory of your WordPress site.
+3. Activate `YITH WooCommerce PDF Invoice and Shipping List` from "Plugins" page.
 
 = Configuration =
 
-YITH WooCommerce PDF Invoice will add a new tab called "PDF Invoice" inside the YIT Plugins menu item. There, you will find all Yithemes plugins with quick access to plugin settings page.
-
-== Installation ==
-
-1. Unzip the downloaded zip file.
-2. Upload the plugin folder into the `wp-content/plugins/` directory of your WordPress site.
-3. Activate `YITH WooCommerce PDF Invoice` from Plugins page.
+YITH WooCommerce PDF Invoice and Shipping List will add a new tab called "PDF Invoice" in "YIT Plugins" menu item. There, you will find all Yithemes plugins with quick access to plugin setting page.
 
 == Screenshots ==
 
-1. This is the invoice settings page, where you can customize how invoice should be created. for invoice the plugin, you can find it inside the YIT Plugins menu item. You can configure what will be printed on invoice header and how the automatic generated invoice number should work.
-2. This is the invoice template settings page, where you can choose which section should be added on PDF invoice.
-3. On the back-end orders page, you can quickly see invoice number and date for orders invoiced.(Under order column).
-4. On the back-end orders page, there are buttons for creating/viewing invoice and shipping list document for the corresponding order.
-5. On the back-end single order page, there is a metabox that shows information about date and number of invoice, if exists, and some buttons for generating/viewing invoice and shipping list documents.
-6. On front-end orders page a button is added for orders with an invoice associated. This button let the customer download the invoice.
-7. A basic template for the invoice, fully customizable.
+1. This is invoice setting page, where you can customize invoice creation settings. You can find it in "YIT Plugins" menu item. You can configure invoice header and functioning of automatic generation of invoice number.
+2. This is invoice template setting page, where you can choose sections to be displayed in PDF invoice.
+3. In back-end order page, you can quickly see invoice number and date for orders invoiced (below order column).
+4. In back-end order page, for each order you find buttons for creating/viewing invoice and shipping list documents.
+5. In back-end single order page, you find a metabox that shows information about invoice date and number, if any, and some buttons for generating/viewing invoice and shipping list documents.
+6. In front-end order page, you find an additional button for orders with an invoice associated. This button lets customers download the invoice.
+7. A basic, fully customizable template for invoices.
 
 == Changelog ==
 
-= 1.0.1 =
+= Version 1.0.2 - RELEASED: MAR 06, 2015 =
+
+* Fixed: PDF generation failed sometimes.
+* Added: support to WPML.
+
+= Version 1.0.1 - RELEASED: FEB 20, 2015 =
 
 * Added: Create PDF shipping list document
 * Added: Shipping list customizable template
-* Added: Buttons for generating/viewing invoices and shipping list from back-end orders page and single order page.
+* Added: Buttons for generating/viewing invoices and shipping list from back-end order page and single order page.
 * Added: Woocommerce 2.3 support
 
-= 1.0.0 =
+= Version 1.0.0 - RELEASED: FEB 13, 2015 =
 
 * Initial release
 
 == Suggestions ==
 
-If you have suggestions about how to improve YITH WooCommerce PDF Invoice, you can [write us](mailto:plugins@yithemes.com "Your Inspiration Themes") so we can bundle them into YITH WooCommerce PDF Invoice.
+If you have any suggestions concerning how to improve YITH WooCommerce PDF Invoice and Shipping List, you can [write to us](mailto:plugins@yithemes.com "Your Inspiration Themes"), so that we can improve YITH WooCommerce PDF Invoice and Shipping List.
 
 == Translators ==
 
 = Available Languages =
 * English
 
-If you have created your own language pack, or have an update for an existing one, you can send [gettext PO and MO file](http://codex.wordpress.org/Translating_WordPress "Translating WordPress")
-[use](http://yithemes.com/contact/ "Your Inspiration Themes") so we can bundle it into YITH WooCommerce PDF Invoice languages.
+If you have created your own language pack, or you have got an updated version of an existing one, you can send it [gettext PO and MO file](http://codex.wordpress.org/Translating_WordPress "Translating WordPress")
+[use](http://yithemes.com/contact/ "Your Inspiration Themes"), so that we can improve YITH WooCommerce PDF Invoice and Shipping List.
 
 == Upgrade notice ==
 

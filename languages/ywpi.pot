@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: YITH WooCommerce Order Tracking\n"
-"POT-Creation-Date: 2015-02-13 16:17+0100\n"
-"PO-Revision-Date: 2015-02-13 16:17+0100\n"
+"POT-Creation-Date: 2015-03-04 14:30+0100\n"
+"PO-Revision-Date: 2015-03-04 14:30+0100\n"
 "Last-Translator: \n"
 "Language-Team: Your Inspiration Themes <plugins@yithemes.com>\n"
 "Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.5\n"
+"X-Generator: Poedit 1.7.4\n"
 "X-Poedit-Basepath: .\n"
 "Plural-Forms: nplurals=2; plural=n!=1;\n"
 "X-Poedit-KeywordsList: __ ;_e;_n:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
@@ -17,55 +17,167 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../class.yith-woocommerce-pdf-invoice.php:239
+#: ../init.php:43
+msgid ""
+"YITH WooCommerce PDF Invoice and Shipping List is enabled but not effective. "
+"It requires Woocommerce in order to work."
+msgstr ""
+
+#: ../init.php:52
+msgid ""
+"You can't activate the free version of YITH WooCommerce PDF Invoice and "
+"Shipping List while you are using the premium one."
+msgstr ""
+
+#: ../lib/class.yith-invoice.php:206
+msgid "Invoice From:"
+msgstr ""
+
+#: ../lib/class.yith-invoice.php:241
 msgid "Invoice To:"
 msgstr ""
 
-#: ../class.yith-woocommerce-pdf-invoice.php:254
-#: ../class.yith-woocommerce-pdf-invoice.php:553
-#: ../class.yith-woocommerce-pdf-invoice.php:643
+#: ../lib/class.yith-invoice.php:258
+#: ../lib/class.yith-woocommerce-pdf-invoice.php:438
+#: ../lib/class.yith-woocommerce-pdf-invoice.php:440
+#: ../lib/class.yith-woocommerce-pdf-invoice.php:445
+#: ../lib/class.yith-woocommerce-pdf-invoice.php:492
 msgid "Invoice"
 msgstr ""
 
-#: ../class.yith-woocommerce-pdf-invoice.php:259
+#: ../lib/class.yith-invoice.php:263 ../lib/class.yith-shipping.php:176
 msgid "Order"
 msgstr ""
 
-#: ../class.yith-woocommerce-pdf-invoice.php:264
+#: ../lib/class.yith-invoice.php:268
 msgid "Invoice date"
 msgstr ""
 
-#: ../class.yith-woocommerce-pdf-invoice.php:268
+#: ../lib/class.yith-invoice.php:272 ../lib/class.yith-shipping.php:185
 msgid "Order Amount"
 msgstr ""
 
-#: ../class.yith-woocommerce-pdf-invoice.php:466
+#: ../lib/class.yith-shipping.php:124
+msgid "Shipping From:"
+msgstr ""
+
+#: ../lib/class.yith-shipping.php:159
+msgid "Shipping To:"
+msgstr ""
+
+#: ../lib/class.yith-shipping.php:181
+msgid "Order date"
+msgstr ""
+
+#: ../lib/class.yith-woocommerce-pdf-invoice.php:128
+msgid "Show invoice"
+msgstr ""
+
+#: ../lib/class.yith-woocommerce-pdf-invoice.php:132
+#: ../lib/class.yith-woocommerce-pdf-invoice.php:444
+msgid "Create invoice"
+msgstr ""
+
+#: ../lib/class.yith-woocommerce-pdf-invoice.php:149
+msgid "Show shipping list document"
+msgstr ""
+
+#: ../lib/class.yith-woocommerce-pdf-invoice.php:154
+msgid "Create shipping list document"
+msgstr ""
+
+#: ../lib/class.yith-woocommerce-pdf-invoice.php:229
+#, php-format
+msgid "Invoice No. %s of %s"
+msgstr ""
+
+#: ../lib/class.yith-woocommerce-pdf-invoice.php:400
 msgid "YITH PDF Invoice"
 msgstr ""
 
-#: ../class.yith-woocommerce-pdf-invoice.php:489
+#: ../lib/class.yith-woocommerce-pdf-invoice.php:424
 msgid "Invoiced on : "
 msgstr ""
 
-#: ../class.yith-woocommerce-pdf-invoice.php:496
+#: ../lib/class.yith-woocommerce-pdf-invoice.php:431
 msgid "Invoice number : "
 msgstr ""
 
-#: ../class.yith-woocommerce-pdf-invoice.php:554
+#: ../lib/class.yith-woocommerce-pdf-invoice.php:437
+msgid "View invoice"
+msgstr ""
+
+#: ../lib/class.yith-woocommerce-pdf-invoice.php:439
+msgid "Cancel invoice"
+msgstr ""
+
+#: ../lib/class.yith-woocommerce-pdf-invoice.php:457
+msgid "View shipping list"
+msgstr ""
+
+#: ../lib/class.yith-woocommerce-pdf-invoice.php:458
+#: ../lib/class.yith-woocommerce-pdf-invoice.php:461
+#: ../lib/class.yith-woocommerce-pdf-invoice.php:467
+msgid "Shipping"
+msgstr ""
+
+#: ../lib/class.yith-woocommerce-pdf-invoice.php:460
+msgid "Cancel shipping list"
+msgstr ""
+
+#: ../lib/class.yith-woocommerce-pdf-invoice.php:466
+msgid "Create shipping list"
+msgstr ""
+
+#: ../lib/class.yith-ywpi-plugin-fw-loader.php:122
+msgid "General"
+msgstr ""
+
+#: ../lib/class.yith-ywpi-plugin-fw-loader.php:125
+msgid "Documents"
+msgstr ""
+
+#: ../lib/class.yith-ywpi-plugin-fw-loader.php:126
 msgid "Template"
 msgstr ""
 
-#: ../class.yith-woocommerce-pdf-invoice.php:559
-#: ../class.yith-woocommerce-pdf-invoice.php:625
+#: ../lib/class.yith-ywpi-plugin-fw-loader.php:129
+#: ../lib/class.yith-ywpi-plugin-fw-loader.php:194
 msgid "Premium Version"
 msgstr ""
 
-#: ../class.yith-woocommerce-pdf-invoice.php:619
+#: ../lib/class.yith-ywpi-plugin-fw-loader.php:190
 #: ../plugin-fw/lib/yit-cpt-unlimited.php:1048
 #: ../plugin-fw/lib/yit-cpt-unlimited.php:1196
 #: ../plugin-fw/lib/yit-cpt-unlimited.php:1202
 #: ../plugin-fw/lib/yit-plugin-panel.php:62
 msgid "Settings"
+msgstr ""
+
+#: ../lib/class.yith-ywpi-plugin-fw-loader.php:219
+msgid "Plugin Documentation"
+msgstr ""
+
+#: ../lib/class.yith-ywpi-plugin-fw-loader.php:232
+msgid ""
+"YITH WooCommerce PDF Invoice and Shipping List is available in an "
+"outstanding PREMIUM version with many new options, discover it now."
+msgstr ""
+
+#: ../lib/class.yith-ywpi-plugin-fw-loader.php:233
+msgid "Premium version"
+msgstr ""
+
+#: ../lib/class.yith-ywpi-plugin-fw-loader.php:240
+#: ../plugin-options/documents-options.php:24
+msgid "YITH WooCommerce PDF Invoice and Shipping List"
+msgstr ""
+
+#: ../lib/class.yith-ywpi-plugin-fw-loader.php:241
+msgid ""
+"In YIT Plugins tab you can find YITH WooCommerce PDF Invoice and Shipping "
+"List options.<br> From this menu you can access all settings of YITH plugins "
+"activated."
 msgstr ""
 
 #: ../plugin-fw/lib/yit-cpt-unlimited.php:460
@@ -197,7 +309,9 @@ msgid "Rewrite"
 msgstr ""
 
 #: ../plugin-fw/lib/yit-cpt-unlimited.php:1059
-msgid "Word used in the URL of each project (slug from post if empty)"
+msgid ""
+"Univocal identification name in the URL for each product (slug from post if "
+"empty)"
 msgstr ""
 
 #: ../plugin-fw/lib/yit-cpt-unlimited.php:1064
@@ -232,7 +346,7 @@ msgid "Taxonomy Rewrite"
 msgstr ""
 
 #: ../plugin-fw/lib/yit-cpt-unlimited.php:1083
-msgid "Set the word for each category page URL."
+msgid "Set univocal name for each category page URL."
 msgstr ""
 
 #: ../plugin-fw/lib/yit-cpt-unlimited.php:1088
@@ -265,15 +379,15 @@ msgstr ""
 
 #: ../plugin-fw/lib/yit-cpt-unlimited.php:1631
 #, php-format
-msgid "Add %s by images"
+msgid "Add %s from images"
 msgstr ""
 
 #: ../plugin-fw/lib/yit-cpt-unlimited.php:1633
 msgid "Add with multiupload"
 msgstr ""
 
-#: ../plugin-fw/lib/yit-plugin-panel-wc.php:303
-msgid "The changes you made will be lost if you leave this page."
+#: ../plugin-fw/lib/yit-plugin-panel-wc.php:345
+msgid "The changes you have made will be lost if you leave this page."
 msgstr ""
 
 #: ../plugin-fw/lib/yit-plugin-panel.php:61
@@ -292,9 +406,9 @@ msgid "Save Changes"
 msgstr ""
 
 #: ../plugin-fw/lib/yit-plugin-panel.php:274
-#: ../plugin-fw/lib/yit-plugin-subpanel.php:145
 #: ../plugin-fw/templates/panel/woocommerce/woocommerce-form.php:8
-msgid "If you go on with this action, you will reset all options in this page."
+msgid ""
+"If you continue with this action, you will reset all options in this page."
 msgstr ""
 
 #: ../plugin-fw/lib/yit-plugin-panel.php:276
@@ -306,12 +420,12 @@ msgstr ""
 #: ../plugin-fw/lib/yit-plugin-panel.php:276
 #: ../plugin-fw/lib/yit-plugin-subpanel.php:147
 #: ../plugin-fw/templates/panel/woocommerce/woocommerce-form.php:10
-msgid "Are you sure of it?"
+msgid "Are you sure?"
 msgstr ""
 
 #: ../plugin-fw/lib/yit-plugin-panel.php:410
 msgid ""
-"The element you have written is already exists. Please, add another name."
+"The element you have entered already exists. Please, enter another name."
 msgstr ""
 
 #: ../plugin-fw/lib/yit-plugin-panel.php:411
@@ -340,7 +454,7 @@ msgid "An error has occurred during import. Please try again."
 msgstr ""
 
 #: ../plugin-fw/lib/yit-plugin-panel.php:418
-msgid "The file inserted is not valid."
+msgid "The added file is not valid."
 msgstr ""
 
 #: ../plugin-fw/lib/yit-plugin-panel.php:419
@@ -349,6 +463,12 @@ msgstr ""
 
 #: ../plugin-fw/lib/yit-plugin-panel.php:420
 msgid "Sorting successful."
+msgstr ""
+
+#: ../plugin-fw/lib/yit-plugin-subpanel.php:145
+msgid ""
+"If you continue with this action, you will reset all the options in this "
+"page."
 msgstr ""
 
 #: ../plugin-fw/lib/yit-pointers.php:70
@@ -376,13 +496,12 @@ msgstr ""
 
 #: ../plugin-fw/lib/yit-pointers.php:85
 msgid ""
-"From now on, you can find all the options of your plugins in YIT Plugin "
-"menu.\n"
+"From now on, you can find all options of your plugins in YIT Plugin menu.\n"
 "                                    Any time one of our plugins is updated, "
 "a new entry will be added to this menu.\n"
-"                                    For example, after update, plugin "
-"options (such for YITH WooCommerce Wishlist, YITH WooCommerce Ajax Search, "
-"etc.)\n"
+"                                    For example, after the update, plugin "
+"options (such as for YITH WooCommerce Wishlist, YITH WooCommerce Ajax "
+"Search, etc.)\n"
 "                                    will be moved from previous location to "
 "YIT Plugin tab."
 msgstr ""
@@ -401,7 +520,7 @@ msgstr ""
 
 #: ../plugin-fw/lib/yit-upgrade.php:122
 msgid ""
-"please <a href=\"%activate_link%\"> activate </a> your copy of %plugin_name%."
+"please <a href=\"%activate_link%\">activate</a> your copy of %plugin_name%."
 msgstr ""
 
 #: ../plugin-fw/lib/yit-upgrade.php:123
@@ -454,11 +573,12 @@ msgid ""
 msgstr ""
 
 #: ../plugin-fw/lib/yit-upgrade.php:493
-msgid "You can't update plugins for this site."
+msgid "You can't update the plugins for this site."
 msgstr ""
 
 #: ../plugin-fw/lib/yit-upgrade.php:497
-msgid "You do not have sufficient permissions to update plugins for this site."
+msgid ""
+"You do not have sufficient permissions to update the plugins for this site."
 msgstr ""
 
 #: ../plugin-fw/lib/yit-upgrade.php:504
@@ -487,11 +607,11 @@ msgid "Invalid licence key"
 msgstr ""
 
 #: ../plugin-fw/licence/lib/yit-licence.php:531
-msgid "Software has been deactivate"
+msgid "Software has been deactivated"
 msgstr ""
 
 #: ../plugin-fw/licence/lib/yit-licence.php:532
-msgid "Exceeded maximum number of activations"
+msgid "Maximum number of activations exceeded"
 msgstr ""
 
 #: ../plugin-fw/licence/lib/yit-licence.php:533
@@ -676,7 +796,7 @@ msgstr ""
 
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:78
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:270
-msgid "Insert title for the field."
+msgid "Insert the title for the field."
 msgstr ""
 
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:83
@@ -698,7 +818,7 @@ msgstr ""
 
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:100
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:292
-msgid "Select type for this field."
+msgid "Select the type for this field."
 msgstr ""
 
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:105
@@ -708,7 +828,7 @@ msgstr ""
 
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:109
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:301
-msgid "Select this if you want this field already checked."
+msgid "Select this option if you want this field appears as already checked."
 msgstr ""
 
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:114
@@ -735,7 +855,7 @@ msgstr ""
 
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:127
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:319
-msgid "Message Error"
+msgid "Error Message"
 msgstr ""
 
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:131
@@ -750,12 +870,12 @@ msgstr ""
 
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:140
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:332
-msgid "Select this if it must be required."
+msgid "Select this option if it must be required."
 msgstr ""
 
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:149
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:341
-msgid "Select this if it must be a valid email."
+msgid "Select this option if the email must be valid."
 msgstr ""
 
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:154
@@ -894,10 +1014,6 @@ msgstr ""
 msgid "No sidebar"
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/sidebar-layout.php:28
-msgid "No sideabr"
-msgstr ""
-
 #: ../plugin-fw/templates/metaboxes/types/sidebar-layout.php:31
 #: ../plugin-fw/templates/metaboxes/types/sidebars.php:39
 msgid "Right sidebar"
@@ -963,90 +1079,129 @@ msgstr ""
 msgid "Italic bold"
 msgstr ""
 
-#: ../plugin-options/invoice-options.php:21
+#: ../plugin-options/documents-options.php:21
+msgid "Upgrade to the PREMIUM VERSION"
+msgstr ""
+
+#: ../plugin-options/documents-options.php:25
+msgid "Discover Advanced Features"
+msgstr ""
+
+#: ../plugin-options/documents-options.php:26
+msgid ""
+"Upgrade to the PREMIUM VERSION of YITH WOOCOMMERCE PDF INVOICE AND SHIPPING "
+"LIST to benefit from all features!"
+msgstr ""
+
+#: ../plugin-options/documents-options.php:30
+msgid ""
+"See YITH WooCommerce PDF Invoice and Shipping List plugin with full premium "
+"features in action."
+msgstr ""
+
+#: ../plugin-options/documents-options.php:32
+msgid "Get Support and Pro Features"
+msgstr ""
+
+#: ../plugin-options/documents-options.php:33
+msgid ""
+"By purchasing the premium version of the plugin, you will take advantage of "
+"the advanced features of the product and you will get one year of free "
+"updates and support through our platform available 24h/24."
+msgstr ""
+
+#: ../plugin-options/documents-options.php:48
 msgid "Invoice settings"
 msgstr ""
 
-#: ../plugin-options/invoice-options.php:26
+#: ../plugin-options/documents-options.php:53
 msgid "Next invoice number"
 msgstr ""
 
-#: ../plugin-options/invoice-options.php:29
+#: ../plugin-options/documents-options.php:56
 msgid "Invoice number for next invoice document."
 msgstr ""
 
-#: ../plugin-options/invoice-options.php:33
-msgid "year billing"
+#: ../plugin-options/documents-options.php:60
+msgid "billing year"
 msgstr ""
 
-#: ../plugin-options/invoice-options.php:39
+#: ../plugin-options/documents-options.php:66
 msgid "Invoice prefix"
 msgstr ""
 
-#: ../plugin-options/invoice-options.php:42
+#: ../plugin-options/documents-options.php:69
 msgid ""
 "Set a text to be used as prefix in invoice number. Leave it blank if no "
 "prefix has to be used"
 msgstr ""
 
-#: ../plugin-options/invoice-options.php:45
+#: ../plugin-options/documents-options.php:72
 msgid "Invoice suffix"
 msgstr ""
 
-#: ../plugin-options/invoice-options.php:48
+#: ../plugin-options/documents-options.php:75
 msgid ""
 "Set a text to be used as suffix in invoice number. Leave it blank if no "
 "suffix has to be used"
 msgstr ""
 
-#: ../plugin-options/invoice-options.php:51
+#: ../plugin-options/documents-options.php:78
 msgid "Invoice number format"
 msgstr ""
 
-#: ../plugin-options/invoice-options.php:54
+#: ../plugin-options/documents-options.php:81
 msgid ""
 "Set format for invoice number. Use [number], [prefix] and [suffix] as "
 "placeholders"
 msgstr ""
 
-#: ../plugin-options/invoice-options.php:58
+#: ../plugin-options/documents-options.php:85
 msgid "Reset on 1st January"
 msgstr ""
 
-#: ../plugin-options/invoice-options.php:61
+#: ../plugin-options/documents-options.php:88
 msgid "Set restart from 1 on 1st January."
 msgstr ""
 
-#: ../plugin-options/invoice-options.php:64
+#: ../plugin-options/documents-options.php:92
 msgid "Invoice date format"
 msgstr ""
 
-#: ../plugin-options/invoice-options.php:67
+#: ../plugin-options/documents-options.php:95
 msgid "Set date format as it should appear on invoices."
 msgstr ""
 
-#: ../plugin-options/invoice-options.php:71
+#: ../plugin-options/documents-options.php:99
 msgid "Invoice generation"
 msgstr ""
 
-#: ../plugin-options/invoice-options.php:82
+#: ../plugin-options/documents-options.php:110
 msgid "Generate invoice automatically:"
 msgstr ""
 
-#: ../plugin-options/invoice-options.php:86
-msgid "On new order."
+#: ../plugin-options/documents-options.php:114
+msgid "For new order."
 msgstr ""
 
-#: ../plugin-options/invoice-options.php:87
+#: ../plugin-options/documents-options.php:115
 msgid "For processing order."
 msgstr ""
 
-#: ../plugin-options/invoice-options.php:88
+#: ../plugin-options/documents-options.php:116
 msgid "For completed order."
 msgstr ""
 
-#: ../plugin-options/invoice-options.php:94
+#: ../plugin-options/documents-options.php:122
 msgid "PDF invoice behaviour:"
+msgstr ""
+
+#: ../plugin-options/documents-options.php:133
+msgid "Enable shipping list"
+msgstr ""
+
+#: ../plugin-options/documents-options.php:136
+msgid "Add buttons for shipping list document generation."
 msgstr ""
 
 #: ../plugin-options/template-options.php:22
@@ -1144,18 +1299,18 @@ msgstr ""
 msgid "Set text to show on invoice footer"
 msgstr ""
 
-#: ../templates/invoice/invoice-details.php:34
-msgid "Product Image"
-msgstr ""
-
-#: ../templates/invoice/invoice-details.php:68
+#: ../templates/invoice/invoice-details.php:47
 msgid "Subtotal"
 msgstr ""
 
-#: ../templates/invoice/invoice-details.php:73
+#: ../templates/invoice/invoice-details.php:52
 msgid "Discount"
 msgstr ""
 
-#: ../templates/invoice/invoice-details.php:87
+#: ../templates/invoice/invoice-details.php:66
 msgid "Total"
+msgstr ""
+
+#: ../templates/invoice/invoice-footer.php:3
+msgid "Notes"
 msgstr ""

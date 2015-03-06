@@ -22,14 +22,15 @@
         background-color: #f1f1f1;
     }
     .section .section-title img{
-        display: inline-block;
+        display: table-cell;
         vertical-align: middle;
+        float: left;
         width: auto;
         margin-right: 15px;
     }
-    .section .section-title h2,
-    .section .section-title h3 {
-        display: inline-block;
+    .section .section-title h2,.section .section-title h3
+     {
+        display: table-cell;
         vertical-align: middle;
         padding: 0;
         font-size: 24px;
@@ -136,6 +137,22 @@
         color: #fff;
     }
 
+    @media (max-width: 767px){
+        .section{
+            margin-left: 0;
+            margin-right: 0;
+        }
+        .premium-cta a.button{
+            float: none;
+        }
+        .premium-cta{
+            text-align: center;
+        }
+        .premium-cta p{
+            width: 100%;
+        }
+    }
+
     @media (max-width: 480px){
         .wrap{
             margin-right: 0;
@@ -174,9 +191,9 @@
             <div class="premium-cta">
                 <p>
                     Upgrade to the <span class="highlight">premium version</span>
-                    of <span class="highlight">YITH WooCommerce Order Tracking</span> to benefit from all features!
+                    of <span class="highlight">YITH WooCommerce Pdf Invoice and Shipping List</span> to benefit from all features!
                 </p>
-                <a href="http://plugins.yithemes.com/yith-woocommerce-order-tracking/" target="_blank" class="premium-cta-button button btn">
+                <a href="<?php echo YITH_YWPI_Plugin_FW_Loader::get_instance()->get_premium_landing_uri(); ?>" target="_blank" class="premium-cta-button button btn">
                     <span class="highlight">UPGRADE</span>
                     <span>to the premium version</span>
                 </a>
@@ -192,10 +209,9 @@
             <div class="col-2">
                 <div class="section-title">
                     <img src="<?php echo YITH_YWPI_ASSETS_IMAGES_URL ?>01-icon.png" alt="Review Title"/>
-                    <h2>Carrier list</h2>
-                    <h3>Premium Feature 1</h3>
+                    <h2>PRO FORMA INVOICE</h2>
                 </div>
-                <p>You can choose among many logistics companies from a list that is always updated and expanded. From the plugin options, activate only the carriers you support, and the others will be ignored. You can always add or remove some of them when you want.</p>
+                <p>While waiting for the invoice of the order, users can ask a pro forma invoice for their order and download immediately a summarizing document of their payment. One click and the requested PDF file will be at their disposal.</p>
             </div>
         </div>
     </div>
@@ -204,11 +220,9 @@
             <div class="col-2">
                 <div class="section-title">
                     <img src="<?php echo YITH_YWPI_ASSETS_IMAGES_URL ?>02-icon.png" alt="Attachment List" />
-                    <h2>Default carrier</h2>
-                    <h3>Premium Feature 2</h3>
+                    <h2>FILE NAME</h2>
                 </div>
-                <p>Do you use a specific carrier frequently?
-                    Set it as default carrier: during the creation of a new order, the carrier will be set automatically without choosing from the list.</p>
+                <p>Every name of the created PDF files will be composed following the settings of the plugin option panel. For every kind of document (Pro Forma Invoice, Invoice, or Shipping), you can create names with a different structure.</p>
             </div>
             <div class="col-1">
                 <img src="<?php echo YITH_YWPI_ASSETS_IMAGES_URL ?>02.png" alt="Attachment List" />
@@ -223,23 +237,78 @@
             <div class="col-2">
                 <div class="section-title">
                     <img src="<?php echo YITH_YWPI_ASSETS_IMAGES_URL ?>03-icon.png" alt="Vote the review" />
-                    <h2>Tracking</h2>
-                    <h3>Premium feature 3</h3>
+                    <h2>SAVE PATH</h2>
                 </div>
-                <p>Do you have a tracking code and you want to follow the delivery process?
-                    The plugin generates dynamically an address to track your order from the site of the carrier. You can find the link everywhere: in the mail, in the order detail and in orders page.</p>
+                <p>If your business is booming, you will create many invoices, and so there will be many downloads. Choose the file path and decide to sort out the folders by year, month or day in which you save the file.</p>
             </div>
         </div>
     </div>
+    <div class="section section-odd clear" style="background: url(<?php echo YITH_YWPI_ASSETS_IMAGES_URL ?>04-bg.png) no-repeat #f1f1f1; background-position: 15% 100%">
+        <div class="landing-container">
+            <div class="col-2">
+                <div class="section-title">
+                    <img src="<?php echo YITH_YWPI_ASSETS_IMAGES_URL ?>04-icon.png" alt="Attachment List" />
+                    <h2>AUTOMATIC BACKUP ON DROBOX</h2>
+                </div>
+                <p>The saving of the created documents can be synchronized with your Dropbox account; in this way, you will have a backup copy of your details every time you make a new save.</p>
+            </div>
+            <div class="col-1">
+                <img src="<?php echo YITH_YWPI_ASSETS_IMAGES_URL ?>04.png" alt="Attachment List" />
+            </div>
+        </div>
+    </div>
+    <div class="section section-even clear" style="background: url(<?php echo YITH_YWPI_ASSETS_IMAGES_URL ?>05-bg.png) no-repeat #fff; background-position: 85% 100%">
+        <div class="landing-container">
+            <div class="col-1">
+                <img src="<?php echo YITH_YWPI_ASSETS_IMAGES_URL ?>05.png" alt="Vote the review" />
+            </div>
+            <div class="col-2">
+                <div class="section-title">
+                    <img src="<?php echo YITH_YWPI_ASSETS_IMAGES_URL ?>05-icon.png" alt="Vote the review" />
+                    <h2>NOTES AND FOOTER IN THE DOCUMENT</h2>
+                </div>
+                <p>In addition to the name of the company and the order details, you can write a different text (even for every type of PDF file created) to both add freely a note into the document, and a footer.</p>
+            </div>
+        </div>
+    </div>
+    <div class="section section-odd clear" style="background: url(<?php echo YITH_YWPI_ASSETS_IMAGES_URL ?>06-bg.png) no-repeat #f1f1f1; background-position: 15% 100%">
+        <div class="landing-container">
+            <div class="col-2">
+                <div class="section-title">
+                    <img src="<?php echo YITH_YWPI_ASSETS_IMAGES_URL ?>06-icon.png" alt="Attachment List" />
+                    <h2>SSN AND VAT</h2>
+                </div>
+                <p>Once activated, these two options will add two new input fields for the users during the checkout step. These elements can also be showed into the PDF document.</p>
+            </div>
+            <div class="col-1">
+                <img src="<?php echo YITH_YWPI_ASSETS_IMAGES_URL ?>06.png" alt="Attachment List" />
+            </div>
+        </div>
+    </div>
+    <div class="section section-even clear" style="background: url(<?php echo YITH_YWPI_ASSETS_IMAGES_URL ?>07-bg.png) no-repeat #fff; background-position: 85% 100%">
+        <div class="landing-container">
+            <div class="col-1">
+                <img src="<?php echo YITH_YWPI_ASSETS_IMAGES_URL ?>07.png" alt="Vote the review" />
+            </div>
+            <div class="col-2">
+                <div class="section-title">
+                    <img src="<?php echo YITH_YWPI_ASSETS_IMAGES_URL ?>07-icon.png" alt="Vote the review" />
+                    <h2>DIFFERENT TEMPLATES FOR EVERY DOCUMENT TYPE</h2>
+                </div>
+                <p>For every document created, you can set which kind of information it should contain: the name of your business and its information, notes and footer, and even all the order details with the products and the related prices.</p>
+            </div>
+        </div>
+    </div>
+
 
     <div class="section section-cta section-odd">
         <div class="landing-container">
             <div class="premium-cta">
                 <p>
                     Upgrade to the <span class="highlight">premium version</span>
-                    of <span class="highlight">YITH WooCommerce Order Tracking</span> to benefit from all features!
+                    of <span class="highlight">YITH WooCommerce Pdf Invoice and Shipping List</span> to benefit from all features!
                 </p>
-                <a href="http://plugins.yithemes.com/yith-woocommerce-order-tracking/" target="_blank" class="premium-cta-button button btn">
+                <a href="<?php echo YITH_YWPI_Plugin_FW_Loader::get_instance()->get_premium_landing_uri(); ?>" target="_blank" class="premium-cta-button button btn">
                     <span class="highlight">UPGRADE</span>
                     <span>to the premium version</span>
                 </a>

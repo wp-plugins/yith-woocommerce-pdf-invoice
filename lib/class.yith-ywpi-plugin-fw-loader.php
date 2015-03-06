@@ -3,17 +3,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
-if ( ! class_exists( 'YITH_Plugin_FW_Loader' ) ) {
+if ( ! class_exists( 'YITH_YWPI_Plugin_FW_Loader' ) ) {
 
 	/**
 	 * Implements features related to an invoice document
 	 *
-	 * @class YITH_Plugin_FW_Loader
+	 * @class YITH_YWPI_Plugin_FW_Loader
 	 * @package Yithemes
 	 * @since   1.0.0
 	 * @author  Your Inspiration Themes
 	 */
-	class YITH_Plugin_FW_Loader {
+	class YITH_YWPI_Plugin_FW_Loader {
 
 		/**
 		 * @var $_panel Panel Object
@@ -28,17 +28,17 @@ if ( ! class_exists( 'YITH_Plugin_FW_Loader' ) ) {
 		/**
 		 * @var string Premium version landing link
 		 */
-		protected $_premium_landing = 'http://plugins.yithemes.com/yith-woocommerce-pdf-invoice/';
+		protected $_premium_landing = 'http://yithemes.com/themes/plugins/yith-woocommerce-pdf-invoice/';
 
 		/**
 		 * @var string Plugin official documentation
 		 */
-		protected $_official_documentation = 'http://yithemes.com/docs-plugins/yith_woocommerce_order_tracking/';
+		protected $_official_documentation = 'http://yithemes.com/docs-plugins/yith-woocommerce-pdf-invoice/';
 
 		/**
 		 * @var string Yith WooCommerce Pdf invoice panel page
 		 */
-		protected $_panel_page = 'yith_woocommerce_pdf_invoice';
+		protected $_panel_page = 'yith_woocommerce_pdf_invoice_panel';
 
 		/**
 		 * Single instance of the class
@@ -78,6 +78,14 @@ if ( ! class_exists( 'YITH_Plugin_FW_Loader' ) ) {
 
 			//  Add stylesheets and scripts files
 			add_action( 'admin_menu', array( $this, 'register_panel' ), 5 );
+
+			//  Show plugin premium tab
+			add_action( 'yith_pdf_invoice_premium', array( $this, 'premium_tab' ) );
+
+			/**
+			 * register plugin to licence/update system
+			 */
+			$this->licence_activation();
 		}
 
 
@@ -95,7 +103,6 @@ if ( ! class_exists( 'YITH_Plugin_FW_Loader' ) ) {
 			}
 		}
 
-
 		/**
 		 * Add a panel under YITH Plugins tab
 		 *
@@ -111,15 +118,15 @@ if ( ! class_exists( 'YITH_Plugin_FW_Loader' ) ) {
 				return;
 			}
 
-			$admin_tabs = array(
-				'invoice'  => __( 'Invoice', 'ywpi' ),
-				'template' => __( 'Template', 'ywpi' )
-			);
+			if ( defined( 'YITH_YWPI_PREMIUM' ) ) {
+				$admin_tabs['general'] = __( 'General', 'ywpi' );
+			}
 
-			if ( ! defined( 'YITH_YWPI_PLUGIN_STARTING' ) ) {
-				if ( ! defined( 'YITH_YWPI_PREMIUM' ) ) {
-					$admin_tabs['premium-landing'] = __( 'Premium Version', 'ywpi' );
-				}
+			$admin_tabs['documents'] = __( 'Documents', 'ywpi' );
+			$admin_tabs['template']  = __( 'Template', 'ywpi' );
+
+			if ( ! defined( 'YITH_YWPI_PREMIUM' ) ) {
+				$admin_tabs['premium-landing'] = __( 'Premium Version', 'ywpi' );
 			}
 
 			$args = array(
@@ -143,8 +150,10 @@ if ( ! class_exists( 'YITH_Plugin_FW_Loader' ) ) {
 
 			$this->_panel = new YIT_Plugin_Panel_WooCommerce( $args );
 
-			add_action( 'woocommerce_admin_field_ywpi_logo', array( $this->_panel, 'yit_upload' ), 10, 1 );
-			add_action( 'woocommerce_update_option_ywpi_logo', array( $this->_panel, 'yit_upload_update' ), 10, 1 );
+			if ( defined( 'YITH_YWPI_VERSION' ) ) {
+				add_action( 'woocommerce_admin_field_ywpi_logo', array( $this->_panel, 'yit_upload' ), 10, 1 );
+				add_action( 'woocommerce_update_option_ywpi_logo', array( $this->_panel, 'yit_upload_update' ), 10, 1 );
+			}
 		}
 
 		/**
@@ -179,12 +188,10 @@ if ( ! class_exists( 'YITH_Plugin_FW_Loader' ) ) {
 		 */
 		public function action_links( $links ) {
 			$links[] = '<a href="' . admin_url( "admin.php?page={$this->_panel_page}" ) . '">' . __( 'Settings', 'ywpi' ) . '</a>';
-			if ( defined( YITH_YWPI_PLUGIN_STARTING ) || YITH_YWPI_PLUGIN_STARTING ) {
-				return $links;
-			}
+
 
 			if ( defined( 'YITH_YWPI_FREE_INIT' ) ) {
-				$links[] = '<a href="' . $this->_premium_landing . '" target="_blank">' . __( 'Premium Version', 'ywpi' ) . '</a>';
+				$links[] = '<a href="' . $this->get_premium_landing_uri() . '" target="_blank">' . __( 'Premium Version', 'ywpi' ) . '</a>';
 			}
 
 			return $links;
@@ -222,16 +229,16 @@ if ( ! class_exists( 'YITH_Plugin_FW_Loader' ) ) {
 
 			$premium_message = defined( 'YITH_YWPI_PREMIUM' )
 				? ''
-				: __( 'YITH WooCommerce PDF Invoice is available in an outstanding PREMIUM version with many new options, discover it now.', 'ywpi' ) .
-				  ' <a href="' . $this->_premium_landing . '">' . __( 'Premium version', 'ywpi' ) . '</a>';
+				: __( 'YITH WooCommerce PDF Invoice and Shipping List is available in an outstanding PREMIUM version with many new options, discover it now.', 'ywpi' ) .
+				  ' <a href="' . $this->get_premium_landing_uri() . '">' . __( 'Premium version', 'ywpi' ) . '</a>';
 
 			$args[] = array(
 				'screen_id'  => 'plugins',
 				'pointer_id' => 'yith_woocommerce_pdf_invoice',
 				'target'     => '#toplevel_page_yit_plugin_panel',
 				'content'    => sprintf( '<h3> %s </h3> <p> %s </p>',
-					__( 'YITH WooCommerce PDF Invoice', 'ywpi' ),
-					__( 'In the YIT Plugins tab you can find the YITH WooCommerce PDF Invoice options.<br> With this menu, you can access to all the settings of our plugins that you have activated.', 'ywpi' ) . '<br>' . $premium_message
+					__( 'YITH WooCommerce PDF Invoice and Shipping List', 'ywpi' ),
+					__( 'In YIT Plugins tab you can find YITH WooCommerce PDF Invoice and Shipping List options.<br> From this menu you can access all settings of YITH plugins activated.', 'ywpi' ) . '<br>' . $premium_message
 				),
 				'position'   => array( 'edge' => 'left', 'align' => 'center' ),
 				'init'       => defined( 'YITH_YWPI_PREMIUM' ) ? YITH_YWPI_INIT : YITH_YWPI_FREE_INIT
@@ -239,5 +246,59 @@ if ( ! class_exists( 'YITH_Plugin_FW_Loader' ) ) {
 
 			YIT_Pointers()->register( $args );
 		}
+
+		/**
+		 * Get the premium landing uri
+		 *
+		 * @since   1.0.0
+		 * @author  Andrea Grillo <andrea.grillo@yithemes.com>
+		 * @return  string The premium landing link
+		 */
+		public function get_premium_landing_uri() {
+			return defined( 'YITH_REFER_ID' ) ? $this->_premium_landing . '?refer_id=' . YITH_REFER_ID : $this->_premium_landing;
+		}
+
+		//region    ****    licence related methods ****
+
+		/**
+		 * Add actions to manage licence activation and updates
+		 */
+		public function licence_activation() {
+			if ( ! defined( 'YITH_YWPI_PREMIUM' ) ) {
+				return;
+			}
+
+			add_action( 'wp_loaded', array( $this, 'register_plugin_for_activation' ), 99 );
+			add_action( 'admin_init', array( $this, 'register_plugin_for_updates' ) );
+		}
+
+		/**
+		 * Register plugins for activation tab
+		 *
+		 * @return void
+		 * @since    2.0.0
+		 * @author   Andrea Grillo <andrea.grillo@yithemes.com>
+		 */
+		public function register_plugin_for_activation() {
+			if ( ! class_exists( 'YIT_Plugin_Licence' ) ) {
+				require_once 'plugin-fw/lib/yit-plugin-licence.php';
+			}
+			YIT_Plugin_Licence()->register( YITH_YWPI_INIT, YITH_YWPI_SECRET_KEY, YITH_YWPI_SLUG );
+		}
+
+		/**
+		 * Register plugins for update tab
+		 *
+		 * @return void
+		 * @since    2.0.0
+		 * @author   Andrea Grillo <andrea.grillo@yithemes.com>
+		 */
+		public function register_plugin_for_updates() {
+			if ( ! class_exists( 'YIT_Upgrade' ) ) {
+				require_once 'plugin-fw/lib/yit-upgrade.php';
+			}
+			YIT_Upgrade()->register( YITH_YWPI_SLUG, YITH_YWPI_INIT );
+		}
+		//endregion
 	}
 }

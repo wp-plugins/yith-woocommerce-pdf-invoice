@@ -2,16 +2,16 @@
 /*
 Plugin Name: YITH WooCommerce PDF Invoice and Shipping List
 Plugin URI: http://yithemes.com
-Description: Generate PDF invoices for WooCommerce orders. You can customize how invoice are generated and how the invoice template looks like.
+Description: Generate PDF invoices for WooCommerce orders. Set manual or automatic invoice generation and shipping list document. Come with fully customizable document template.
 Author: Yithemes
 Text Domain: ywpi
-Version: 1.0.1
+Version: 1.0.2
 Author URI: http://yithemes.com/
 Domain Path: /languages/
 
 @author Yithemes
 @package YITH WooCommerce PDF Invoice
-@version 1.0.1
+@version 1.0.2
 */
 /*  Copyright 2015  Your Inspiration Themes  (email : plugins@yithemes.com)
 
@@ -40,7 +40,7 @@ if ( ! function_exists( 'is_plugin_active' ) ) {
 function yith_ywpi_install_woocommerce_admin_notice() {
 	?>
 	<div class="error">
-		<p><?php _e( 'YITH WooCommerce PDF Invoice is enabled but not effective. It requires Woocommerce in order to work.', 'yit' ); ?></p>
+		<p><?php _e( 'YITH WooCommerce PDF Invoice and Shipping List is enabled but not effective. It requires Woocommerce in order to work.', 'yit' ); ?></p>
 	</div>
 <?php
 }
@@ -49,7 +49,7 @@ function yith_ywpi_install_woocommerce_admin_notice() {
 function yith_ywpi_install_free_admin_notice() {
 	?>
 	<div class="error">
-		<p><?php _e( 'You can\'t activate the free version of YITH WooCommerce PDF Invoice while you are using the premium one.', 'yit' ); ?></p>
+		<p><?php _e( 'You can\'t activate the free version of YITH WooCommerce PDF Invoice and Shipping List while you are using the premium one.', 'yit' ); ?></p>
 	</div>
 <?php
 }
@@ -65,7 +65,7 @@ if ( ! defined( 'YITH_YWPI_FREE_INIT' ) ) {
 }
 
 if ( ! defined( 'YITH_YWPI_VERSION' ) ) {
-	define( 'YITH_YWPI_VERSION', '1.0.1' );
+	define( 'YITH_YWPI_VERSION', '1.0.2' );
 }
 
 if ( ! defined( 'YITH_YWPI_FILE' ) ) {
@@ -118,10 +118,6 @@ if ( ! defined( 'YITH_YWPI_SAVE_INVOICE_URL' ) ) {
 	define( 'YITH_YWPI_SAVE_INVOICE_URL', $wp_upload_dir['baseurl'] . '/ywpi-pdf-invoice/' );
 }
 
-if ( ! defined( 'YITH_YWPI_PLUGIN_STARTING' ) ) {
-	define( 'YITH_YWPI_PLUGIN_STARTING', '1' );
-}
-
 //endregion
 
 function yith_ywpi_init() {
@@ -130,17 +126,19 @@ function yith_ywpi_init() {
 	 */
 	load_plugin_textdomain( 'ywpi', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 
-	require_once( YITH_YWPI_LIB_DIR . 'class.yith-plugin-fw-loader.php' );
+	require_once( YITH_YWPI_LIB_DIR . 'class.yith-ywpi-plugin-fw-loader.php' );
 	require_once( YITH_YWPI_LIB_DIR . 'class.yith-woocommerce-pdf-invoice.php' );
 	require_once( YITH_YWPI_LIB_DIR . 'class.yith-document.php' );
 	require_once( YITH_YWPI_LIB_DIR . 'class.yith-invoice.php' );
 	require_once( YITH_YWPI_LIB_DIR . 'class.yith-shipping.php' );
 	require_once( YITH_YWPI_DIR . 'functions.php' );
 
-	YITH_Plugin_FW_Loader::get_instance();
+	YITH_YWPI_Plugin_FW_Loader::get_instance();
 
+	global $YWPI_Instance;
 	$YWPI_Instance = new YITH_WooCommerce_Pdf_Invoice();
 }
+
 add_action( 'yith_ywpi_init', 'yith_ywpi_init' );
 
 
@@ -148,13 +146,12 @@ function yith_ywpi_install() {
 
 	if ( ! function_exists( 'WC' ) ) {
 		add_action( 'admin_notices', 'yith_ywpi_install_woocommerce_admin_notice' );
-	}
-	elseif ( defined( 'YITH_YWPI_PREMIUM' ) ) {
+	} elseif ( defined( 'YITH_YWPI_PREMIUM' ) ) {
 		add_action( 'admin_notices', 'yith_ywpi_install_free_admin_notice' );
 		deactivate_plugins( plugin_basename( __FILE__ ) );
-	}
-	else {
+	} else {
 		do_action( 'yith_ywpi_init' );
 	}
 }
+
 add_action( 'plugins_loaded', 'yith_ywpi_install', 11 );
