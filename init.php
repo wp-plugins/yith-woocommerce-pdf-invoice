@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: YITH WooCommerce PDF Invoice and Shipping List
-Plugin URI: http://yithemes.com
+Plugin URI: http://yithemes.com/themes/plugins/yith-woocommerce-pdf-invoice/
 Description: Generate PDF invoices for WooCommerce orders. Set manual or automatic invoice generation and shipping list document. Come with fully customizable document template.
 Author: Yithemes
 Text Domain: ywpi

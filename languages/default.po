@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: YITH WooCommerce Order Tracking\n"
-"POT-Creation-Date: 2015-03-04 14:30+0100\n"
-"PO-Revision-Date: 2015-03-04 14:30+0100\n"
+"POT-Creation-Date: 2015-03-06 10:09+0100\n"
+"PO-Revision-Date: 2015-03-06 10:09+0100\n"
 "Last-Translator: \n"
 "Language-Team: Your Inspiration Themes <plugins@yithemes.com>\n"
 "Language: en\n"
@@ -38,10 +38,10 @@ msgid "Invoice To:"
 msgstr ""
 
 #: ../lib/class.yith-invoice.php:258
-#: ../lib/class.yith-woocommerce-pdf-invoice.php:438
 #: ../lib/class.yith-woocommerce-pdf-invoice.php:440
-#: ../lib/class.yith-woocommerce-pdf-invoice.php:445
-#: ../lib/class.yith-woocommerce-pdf-invoice.php:492
+#: ../lib/class.yith-woocommerce-pdf-invoice.php:442
+#: ../lib/class.yith-woocommerce-pdf-invoice.php:447
+#: ../lib/class.yith-woocommerce-pdf-invoice.php:494
 msgid "Invoice"
 msgstr ""
 
@@ -74,7 +74,7 @@ msgid "Show invoice"
 msgstr ""
 
 #: ../lib/class.yith-woocommerce-pdf-invoice.php:132
-#: ../lib/class.yith-woocommerce-pdf-invoice.php:444
+#: ../lib/class.yith-woocommerce-pdf-invoice.php:446
 msgid "Create invoice"
 msgstr ""
 
@@ -91,41 +91,41 @@ msgstr ""
 msgid "Invoice No. %s of %s"
 msgstr ""
 
-#: ../lib/class.yith-woocommerce-pdf-invoice.php:400
+#: ../lib/class.yith-woocommerce-pdf-invoice.php:402
 msgid "YITH PDF Invoice"
 msgstr ""
 
-#: ../lib/class.yith-woocommerce-pdf-invoice.php:424
+#: ../lib/class.yith-woocommerce-pdf-invoice.php:426
 msgid "Invoiced on : "
 msgstr ""
 
-#: ../lib/class.yith-woocommerce-pdf-invoice.php:431
+#: ../lib/class.yith-woocommerce-pdf-invoice.php:433
 msgid "Invoice number : "
 msgstr ""
 
-#: ../lib/class.yith-woocommerce-pdf-invoice.php:437
+#: ../lib/class.yith-woocommerce-pdf-invoice.php:439
 msgid "View invoice"
 msgstr ""
 
-#: ../lib/class.yith-woocommerce-pdf-invoice.php:439
+#: ../lib/class.yith-woocommerce-pdf-invoice.php:441
 msgid "Cancel invoice"
 msgstr ""
 
-#: ../lib/class.yith-woocommerce-pdf-invoice.php:457
+#: ../lib/class.yith-woocommerce-pdf-invoice.php:459
 msgid "View shipping list"
 msgstr ""
 
-#: ../lib/class.yith-woocommerce-pdf-invoice.php:458
-#: ../lib/class.yith-woocommerce-pdf-invoice.php:461
-#: ../lib/class.yith-woocommerce-pdf-invoice.php:467
+#: ../lib/class.yith-woocommerce-pdf-invoice.php:460
+#: ../lib/class.yith-woocommerce-pdf-invoice.php:463
+#: ../lib/class.yith-woocommerce-pdf-invoice.php:469
 msgid "Shipping"
 msgstr ""
 
-#: ../lib/class.yith-woocommerce-pdf-invoice.php:460
+#: ../lib/class.yith-woocommerce-pdf-invoice.php:462
 msgid "Cancel shipping list"
 msgstr ""
 
-#: ../lib/class.yith-woocommerce-pdf-invoice.php:466
+#: ../lib/class.yith-woocommerce-pdf-invoice.php:468
 msgid "Create shipping list"
 msgstr ""
 
