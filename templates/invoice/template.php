@@ -16,7 +16,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 <!DOCTYPE html>
 <html>
 <head>
-
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+	<style type="text/css">
+		body {
+			color: #000;
+			font-family: "Open Sans", sans-serif;
+		}
+	</style>
 	<?php
 	/**
 	 * yith_ywpi_invoice_template_head hook

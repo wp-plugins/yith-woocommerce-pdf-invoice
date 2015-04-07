@@ -4,7 +4,7 @@ Contributors: yithemes
 Tags: woocommerce, orders, woocommerce order, pdf, invoice, pdf invoice, delivery note, pdf invoices, automatic invoice, download, download invoice, bill order, billing, automatic billing, order invoice, billing invoice, new order, processing order, shipping list, shipping document, delivery, packing slip, transport document,  delivery, shipping, order, shop, shop invoice, customer, sell, invoices, email invoice, packing slips
 Requires at least: 4.0
 Tested up to: 4.1.0
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -14,7 +14,7 @@ Generate and send PDF invoices and shipping list documents for WooCommerce order
 
 This WooCommerce plugin allows creating PDF invoices and shipping list documents for WooCommerce orders quickly and easily with customizable templates.
 Choose if generating invoices manually or automatically using custom number format and send it as email attachment to your customers.
-
+   
 = Main features =
 
 * Generate PDF invoices and shipping list documents.
@@ -52,7 +52,11 @@ YITH WooCommerce PDF Invoice and Shipping List will add a new tab called "PDF In
 
 == Changelog ==
 
-= Version 1.0.2 - RELEASED: MAR 06, 2015 =
+= Version 1.0.3 - RELEASED: APR 07, 2015 ==
+
+* Fix : documents with greek text could not be rendered correctly.
+
+= Version 1.0.2 - RELEASED: MAR 05, 2015 =
 
 * Fixed: PDF generation failed sometimes.
 * Added: support to WPML.
