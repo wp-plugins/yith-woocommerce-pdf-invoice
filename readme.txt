@@ -3,7 +3,7 @@
 Contributors: yithemes
 Tags: woocommerce, orders, woocommerce order, pdf, invoice, pdf invoice, delivery note, pdf invoices, automatic invoice, download, download invoice, bill order, billing, automatic billing, order invoice, billing invoice, new order, processing order, shipping list, shipping document, delivery, packing slip, transport document,  delivery, shipping, order, shop, shop invoice, customer, sell, invoices, email invoice, packing slips
 Requires at least: 4.0
-Tested up to: 4.1.0
+Tested up to: 4.1.1
 Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -26,6 +26,8 @@ Choose if generating invoices manually or automatically using custom number form
 * Customizable invoice template.
 * Customizable shipping list template.
 * Download invoices from customers' order page.
+
+For a more detailed list of options and features of the plugin, please look at the [official documentation](http://yithemes.com/docs-plugins/yith-woocommerce-pdf-invoice/ "Yith WooCommerce PDF Invoice official documentation").
 
 Discover all the features of the plugin and install it in your theme: the result will be extremely satisfying.
 
