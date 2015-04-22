@@ -60,8 +60,9 @@ function ywpi_get_action_name_for_nonce( $document ) {
  */
 function ywpi_document_nonce_url( $arg_name, $document ) {
 	$action_url   = add_query_arg( $arg_name, $document->order->id, remove_query_arg( ywpi_get_query_args_list() ) );
-	$complete_url = wp_nonce_url( $action_url, ywpi_get_action_name_for_nonce( $document ), YITH_YWPI_NONCE_ARG_NAME);
-	return $complete_url;
+	$complete_url = wp_nonce_url( $action_url, ywpi_get_action_name_for_nonce( $document ), YITH_YWPI_NONCE_ARG_NAME );
+
+	return esc_url( $complete_url );
 }
 
 /**
@@ -76,6 +77,7 @@ function ywpi_document_nonce_check( $document ) {
 	if ( ! check_admin_referer( ywpi_get_action_name_for_nonce( $document ), YITH_YWPI_NONCE_ARG_NAME ) ) {
 		return false;
 	}
+
 	return true;
 }
 

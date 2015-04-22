@@ -1,8 +1,5 @@
 <wpml-config>
     <admin-texts>
-        <key name="ywpi_invoice_prefix"/>
-        <key name="ywpi_invoice_suffix"/>
-        <key name="ywpi_invoice_number_format"/>
         <key name="ywpi_company_details"/>
         <key name="ywpi_invoice_notes"/>
         <key name="ywpi_invoice_footer"/>
