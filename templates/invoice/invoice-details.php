@@ -32,7 +32,43 @@
 			<td class="column-tax"><?php echo wc_price( $tax ); ?></td>
 		</tr>
 
-	<?php }; ?>
+	<?php };
+
+	$order_shipping = $ywpi_document->order->get_items( 'shipping' );
+	foreach ( $order_shipping as $item_id => $item ) {
+		?>
+
+		<tr>
+			<td class="column-product">
+				<?php echo ! empty( $item['name'] ) ? esc_html( $item['name'] ) : __( 'Shipping', 'ywpi' ); ?>
+			</td>
+
+				<td class="column-quantity">
+				</td>
+
+				<td class="column-price">
+				</td>
+
+				<td class="column-total">
+					<?php echo ( isset( $item['cost'] ) ) ? wc_price( wc_round_tax_total( $item['cost'] ) ) : ''; ?>
+				</td>
+
+				<td class="column-tax">
+					<?php
+					$taxes      = 0;
+					$taxes_list = maybe_unserialize($item['taxes'] );
+					foreach ( $taxes_list as $tax_id => $tax_item ) {
+						$taxes += $tax_item;
+					}
+					echo( wc_price( wc_round_tax_total( $taxes ) ) );
+					?>
+				</td>
+		</tr>
+	<?php
+	};
+
+	?>
+
 	</tbody>
 </table>
 
