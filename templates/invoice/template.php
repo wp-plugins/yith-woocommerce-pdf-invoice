@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<style type="text/css">
 		body {
 			color: #000;
-			font-family: "Open Sans", sans-serif;
+			font-family: "dejavu sans", "open sans", "sans-serif";
 		}
 	</style>
 	<?php

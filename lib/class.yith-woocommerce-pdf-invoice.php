@@ -20,7 +20,7 @@ if ( ! class_exists( 'YITH_WooCommerce_Pdf_Invoice' ) ) {
 		 * Initialize plugin and registers actions and filters to be used
 		 *
 		 * @since  1.0
-		 * @author Lorenzo giuffrida
+		 * @author Lorenzo Giuffrida
 		 * @access public
 		 * @return void
 		 */
@@ -76,7 +76,7 @@ if ( ! class_exists( 'YITH_WooCommerce_Pdf_Invoice' ) ) {
 		 * Enqueue css file
 		 *
 		 * @since  1.0
-		 * @author Lorenzo giuffrida
+		 * @author Lorenzo Giuffrida
 		 */
 		public function enqueue_styles() {
 			/*
@@ -378,7 +378,7 @@ if ( ! class_exists( 'YITH_WooCommerce_Pdf_Invoice' ) ) {
 		 * Register actions and filters to be used for creating an entry on YIT Plugin menu
 		 *
 		 * @since  1.0
-		 * @author Lorenzo giuffrida
+		 * @author Lorenzo Giuffrida
 		 * @access public
 		 * @return void
 		 */
@@ -393,7 +393,7 @@ if ( ! class_exists( 'YITH_WooCommerce_Pdf_Invoice' ) ) {
 		 *  Add a metabox on backend order page, to be filled with order tracking information
 		 *
 		 * @since  1.0
-		 * @author Lorenzo giuffrida
+		 * @author Lorenzo Giuffrida
 		 * @access public
 		 * @return void
 		 */
@@ -411,7 +411,7 @@ if ( ! class_exists( 'YITH_WooCommerce_Pdf_Invoice' ) ) {
 		 * @param $post the order object that is currently shown
 		 *
 		 * @since  1.0
-		 * @author Lorenzo giuffrida
+		 * @author Lorenzo Giuffrida
 		 * @access public
 		 * @return void
 		 */

@@ -2,7 +2,6 @@
     .section{
         margin-left: -20px;
         margin-right: -20px;
-        font-family: "Raleway";
     }
     .section h1{
         text-align: center;

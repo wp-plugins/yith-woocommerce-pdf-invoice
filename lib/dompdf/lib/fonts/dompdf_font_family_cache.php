@@ -85,4 +85,25 @@
     'italic' => DOMPDF_FONT_DIR . 'e1ed1c78d201fe6255daee12e8820a6d',
     'bold_italic' => DOMPDF_FONT_DIR . 'c1583238aa915ad7e56d544a3a5f8f4e',
   ),
+  'dejavu sans' =>
+	  array (
+		  'bold' => DOMPDF_FONT_DIR . 'DejaVuSans-Bold',
+		  'bold_italic' => DOMPDF_FONT_DIR . 'DejaVuSans-BoldOblique',
+		  'italic' => DOMPDF_FONT_DIR . 'DejaVuSans-Oblique',
+		  'normal' => DOMPDF_FONT_DIR . 'DejaVuSans',
+	  ),
+  'dejavu sans mono' =>
+	  array (
+		  'bold' => DOMPDF_FONT_DIR . 'DejaVuSansMono-Bold',
+		  'bold_italic' => DOMPDF_FONT_DIR . 'DejaVuSansMono-BoldOblique',
+		  'italic' => DOMPDF_FONT_DIR . 'DejaVuSansMono-Oblique',
+		  'normal' => DOMPDF_FONT_DIR . 'DejaVuSansMono',
+	  ),
+  'dejavu serif' =>
+	  array (
+		  'bold' => DOMPDF_FONT_DIR . 'DejaVuSerif-Bold',
+		  'bold_italic' => DOMPDF_FONT_DIR . 'DejaVuSerif-BoldItalic',
+		  'italic' => DOMPDF_FONT_DIR . 'DejaVuSerif-Italic',
+		  'normal' => DOMPDF_FONT_DIR . 'DejaVuSerif',
+	  ),
 ) ?>

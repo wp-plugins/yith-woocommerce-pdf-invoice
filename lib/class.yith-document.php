@@ -40,7 +40,7 @@ if ( ! class_exists( 'YITH_Document' ) ) {
 		 * Initialize plugin and registers actions and filters to be used
 		 *
 		 * @since  1.0
-		 * @author Lorenzo giuffrida
+		 * @author Lorenzo Giuffrida
 		 * @access public
 		 * @return void
 		 */
