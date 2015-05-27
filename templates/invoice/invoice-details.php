@@ -3,11 +3,11 @@
 <table class="invoice-details">
 	<thead>
 	<tr>
-		<th class="column-product">Product</th>
-		<th class="column-quantity">Qty</th>
-		<th class="column-price">Price</th>
-		<th class="column-total">Line total</th>
-		<th class="column-tax">Tax</th>
+		<th class="column-product"><?php _e( 'Product', 'ywpi' ); ?></th>
+		<th class="column-quantity"><?php _e( 'Qty', 'ywpi' ); ?></th>
+		<th class="column-price"><?php _e( 'Price', 'ywpi' ); ?></th>
+		<th class="column-total"><?php _e( 'Line total', 'ywpi' ); ?></th>
+		<th class="column-tax"><?php _e( 'Tax', 'ywpi' ); ?></th>
 	</tr>
 	</thead>
 	<tbody>
@@ -43,26 +43,26 @@
 				<?php echo ! empty( $item['name'] ) ? esc_html( $item['name'] ) : __( 'Shipping', 'ywpi' ); ?>
 			</td>
 
-				<td class="column-quantity">
-				</td>
+			<td class="column-quantity">
+			</td>
 
-				<td class="column-price">
-				</td>
+			<td class="column-price">
+			</td>
 
-				<td class="column-total">
-					<?php echo ( isset( $item['cost'] ) ) ? wc_price( wc_round_tax_total( $item['cost'] ) ) : ''; ?>
-				</td>
+			<td class="column-total">
+				<?php echo ( isset( $item['cost'] ) ) ? wc_price( wc_round_tax_total( $item['cost'] ) ) : ''; ?>
+			</td>
 
-				<td class="column-tax">
-					<?php
-					$taxes      = 0;
-					$taxes_list = maybe_unserialize($item['taxes'] );
-					foreach ( $taxes_list as $tax_id => $tax_item ) {
-						$taxes += $tax_item;
-					}
-					echo( wc_price( wc_round_tax_total( $taxes ) ) );
-					?>
-				</td>
+			<td class="column-tax">
+				<?php
+				$taxes      = 0;
+				$taxes_list = maybe_unserialize( $item['taxes'] );
+				foreach ( $taxes_list as $tax_id => $tax_item ) {
+					$taxes += $tax_item;
+				}
+				echo( wc_price( wc_round_tax_total( $taxes ) ) );
+				?>
+			</td>
 		</tr>
 	<?php
 	};

@@ -1,4 +1,3 @@
-
 <div class="invoice-document">
 	<div class="company-header">
 		<table>

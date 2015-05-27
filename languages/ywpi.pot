@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: YITH WooCommerce Order Tracking\n"
-"POT-Creation-Date: 2015-05-22 12:05+0100\n"
+"POT-Creation-Date: 2015-05-27 13:16+0100\n"
 "PO-Revision-Date: 2015-04-22 11:34+0100\n"
 "Last-Translator: \n"
 "Language-Team: Your Inspiration Themes <plugins@yithemes.com>\n"
@@ -10,7 +10,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8\n"
+"X-Generator: Poedit 1.8.1\n"
 "X-Poedit-Basepath: ..\\\n"
 "Plural-Forms: nplurals=2; plural=n!=1;\n"
 "X-Poedit-KeywordsList: __ ;_e;_n:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
@@ -19,13 +19,13 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: plugin-fw\n"
 
-#: init.php:43
+#: init.php:44
 msgid ""
 "YITH WooCommerce PDF Invoice and Shipping List is enabled but not effective. "
 "It requires Woocommerce in order to work."
 msgstr ""
 
-#: init.php:51
+#: init.php:52
 msgid ""
 "You can't activate the free version of YITH WooCommerce PDF Invoice and "
 "Shipping List while you are using the premium one."
@@ -397,6 +397,26 @@ msgstr ""
 
 #: plugin-options/template-options.php:96
 msgid "Set text to show on invoice footer"
+msgstr ""
+
+#: templates/invoice/invoice-details.php:6
+msgid "Product"
+msgstr ""
+
+#: templates/invoice/invoice-details.php:7
+msgid "Qty"
+msgstr ""
+
+#: templates/invoice/invoice-details.php:8
+msgid "Price"
+msgstr ""
+
+#: templates/invoice/invoice-details.php:9
+msgid "Line total"
+msgstr ""
+
+#: templates/invoice/invoice-details.php:10
+msgid "Tax"
 msgstr ""
 
 #: templates/invoice/invoice-details.php:83
