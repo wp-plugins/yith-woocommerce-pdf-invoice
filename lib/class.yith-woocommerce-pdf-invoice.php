@@ -163,6 +163,7 @@ if ( ! class_exists( 'YITH_WooCommerce_Pdf_Invoice' ) ) {
 		//region Invoice templates actions
 
 		public function attach_invoice_to_email( $attachments, $status, $order ) {
+
 			$invoice = new YITH_Invoice( $order->id );
 			if ( ! $invoice->exists ) {
 				return $attachments;

@@ -22,7 +22,7 @@ msgstr ""
 #: init.php:44
 msgid ""
 "YITH WooCommerce PDF Invoice and Shipping List is enabled but not effective. "
-"It requires Woocommerce in order to work."
+"It requires WooCommerce in order to work."
 msgstr ""
 
 #: init.php:52
